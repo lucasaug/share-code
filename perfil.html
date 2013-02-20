@@ -4,8 +4,9 @@
 		<title>--Perfil--</title>
 		<link rel="stylesheet" type="text/css" href="estilo.css" />
 		<style type="text/css">
+
 		#editar{
-			width: 5%;
+			width: 6%;
 			height: 1%;
 			font-size: 8pt;
 			margin-left: 5%;
@@ -16,8 +17,37 @@
 		.lefted{
 			margin-left: 5%;
 		}
+
 		</style>
-		<script type="text/javascript"></script>
+		<script type="text/javascript">
+
+			var elementosEdit = ["nome", "usuario","religiao","nAcad"];
+
+			function editar(){
+				for(var i in elementosEdit){
+					var campo = document.getElementById(elementosEdit[i]+"Edit");
+					campo.value = document.getElementById(elementosEdit[i]).innerHTML;
+					campo.setAttribute("type","text");
+				}
+				var botao = document.getElementById("editar");
+				botao.value="Concluir";
+				botao.setAttribute("onclick","concluir()");
+				botao.style.marginLeft="50%";
+			}
+
+			function concluir(){
+				for(var i in elementosEdit){
+					var campo = document.getElementById(elementosEdit[i]+"Edit");
+					document.getElementById(elementosEdit[i]).innerHTML = campo.value;
+					campo.setAttribute("type","hidden");
+				}
+				var botao = document.getElementById("editar");
+				botao.value="Editar";
+				botao.setAttribute("onclick","editar()");
+				botao.style.marginLeft="5%";
+			}
+
+		</script>
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 	</head>
 	<body>
@@ -26,25 +56,45 @@
 			<div id="nav"></div>
 		</div>
 		<div id="conteudo">
-		    <h2 id="nome" class="inline">TheShadowLight</h2>
-		    <input type="button" value="Editar" id="editar" class="inline">
+		    <h1 id="nome" class="inline">TheShadowLight</h1>
+		    <span class="input">
+		    	<span class="tipo">
+		    		<input type="hidden" id="nomeEdit" />
+		    	</span>
+		    </span>
+		    <input type="button" value="Editar" id="editar" class="inline" onclick="editar()">
 		    <br />
 		    <h3>Informa&ccedil;&otilde;es Pessoais</h3>
 		    <div id="pessoal" class="lefted">
-		    	<h4 id="usuario">Nome:&nbsp;
-		    		<span>Raphael Esteves Motta</span>
+		    	<h4>Nome:&nbsp;
+		    		<span id="usuario">Raphael Esteves Motta</span>
+		    		<span class="input">
+		    			<span class="tipo">
+		    				<input type="hidden" id="usuarioEdit" />
+		    			</span>
+		    		</span>
 		    	</h4>
 		    	<h4>Data de nascimento:&nbsp;
 		    		<span id="nascimento">01/janeiro/2013</span>
 		    	</h4>
 		    	<h4>Prefer&ecirc;ncia Religiosa:&nbsp;
-		    		<span id="nascimento">Ate&iacute;smo</span>
+		    		<span id="religiao">Ate&iacute;smo</span>
+		    		<span class="input">
+		    			<span class="tipo">
+		    				<input type="hidden" id="religiaoEdit" />
+		    			</span>
+		    		</span>
 		    	</h4>
 		    </div>
 		    <h3>Informa&ccedil;&otilde;es Profissionais</h3>
 		    <div id="profissional" class="lefted">
 		    	<h4>N&iacute;vel acad&ecirc;mico:&nbsp;
 		    		<span id="nAcad">Ensino m&eacute;dio incompleto</span>
+		    		<span class="input">
+		    			<span class="tipo">
+		    				<input type="hidden" id="nAcadEdit" />
+		    			</span>
+		    		</span>
 		    	</h4>
 		    	<h4>Profiss&atilde;o:&nbsp;
 		    		<span id="profissao">Estudante</span>
