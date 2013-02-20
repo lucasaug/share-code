@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>--Login--</title>
+        <link type="text/css" rel="stylesheet" href="estilo.css"></link>
+        <style type="text/css">
+            #submit{
+                margin-top:0.5%;
+            }
+        </style>
+        <script type="text/javascript">
+        
+            function focado(e){
+                if(!e) var e = window.event;
+                
+                var campo = e.target;
+                var valor = campo.value;
+                var id = campo.id;
+                
+                if(id=="senha"){
+                    campo.setAttribute("type","password");
+                }
+                
+                if(valor == campo.defaultValue){
+                    campo.value = "";
+                }
+            }
+            
+            function desfocado(e){
+                if(!e) var e = window.event;
+                
+                var campo = e.target;
+                var valor = campo.value;
+                var id = campo.id;
+                
+                if(valor == ""){
+                    campo.value = campo.defaultValue;
+                    if(id=="senha"){
+                        campo.setAttribute("type","text");
+                    }
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div id="topo">
+            <img src="./recursos/logo.png" id="logo"/>
+            <h1>ShareCode</h1>
+        </div>
+        <div id="nav"></div>
+        <div id="conteudo">
+            <form method="post" action="">
+                <input type="text" name="usuario" id="usuario" value="Usu&aacute;rio" autofocus onfocus="focado(event)" onblur="desfocado(event)" />
+                <input type="text" name="senha" id="senha" value="Senha" onfocus="focado(event)" onblur="desfocado(event)" />
+                <input type="submit" name="submit" id="submit" value="Entrar" />
+            </form>
+        </div><div id="rodape">
+        
+        </div>
+    </body>
+</html>
