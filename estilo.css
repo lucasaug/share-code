@@ -32,6 +32,7 @@ input, textarea{
 #logo{
     margin: 1%;
     float:left;
+    height: 20%;
 }
 
 /*textarea{
