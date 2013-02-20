@@ -7,22 +7,39 @@
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 	</head>
 	<body>		
-		<div id="topo"></div>
-		<div id="nav"></div>
+		<div id="topo">
+		    <div id="nav"></div>
+		</div>
 		<div id="conteudo">
 		    <div style="margin-left: auto; margin-right: auto;">
 		        <form method="post" action="" enctype="multipart/form-data">
     		        <h2>Enviar arquivo</h2>
     		        <br/>
-    		        <label>Nome do c&oacute;digo:</label>
-   		            <input type="text" name="nomcod"/>
-   		            <label>Descri&ccedil;&atilde;o:</label>
-    		        <textarea name="descod"></textarea>
-    		        <label>Autor:</label>
-    		        <input type="text" name="autor"/>
-    		        <input type="file" name="arquivo" id="arquivo"/>
+    		        <span class="input">
+					    <span class="nome">Nome do c&oacute;digo:</span>
+   		                <span class="tipo">
+   		                    <input type="text" name="nome"/>
+   		                </span>
+   		             </span>
+   		            <span class="input">
+   		                <span class="nome">Descri&ccedil;&atilde;o:</span>
+   		                <span class="tipo">
+   		                    <textarea name="desc"></textarea>
+   		                </span>
+   		            </span>
+    		        <span class="input">
+    		            <span class="nome">Autor:</span>
+    		            <span class="tipo">
+    		                <input type="text" name="autor"/>
+    		            </span>
+    		        </span>
+    		        <span class="input">
+    		            <span class="tipo">
+    		                <textarea name="codigo"></textarea>
+    		            </span>
+    		        </span>
     		        <br/>
-    		        <input type="submit" value="Enviar arquivo" />
+    		        <input type="submit" value="Enviar c&oacute;digo" />
     		    </form>
     		</div>
 		</div>

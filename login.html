@@ -46,13 +46,20 @@
     <body>
         <div id="topo">
             <img src="./recursos/logo.png" id="logo"/>
-            <h1>ShareCode</h1>
+            <div id="nav"></div>
         </div>
-        <div id="nav"></div>
         <div id="conteudo">
             <form method="post" action="">
-                <input type="text" name="usuario" id="usuario" value="Usu&aacute;rio" autofocus onfocus="focado(event)" onblur="desfocado(event)" />
-                <input type="text" name="senha" id="senha" value="Senha" onfocus="focado(event)" onblur="desfocado(event)" />
+                <span class="input">
+				    <span class="tipo">
+				        <input type="text" name="usuario" id="usuario" value="Usu&aacute;rio" autofocus onfocus="focado(event)" onblur="desfocado(event)" />
+				    </span>
+				</span>
+                <span class="input">
+                    <span class="tipo">
+                        <input type="text" name="senha" id="senha" value="Senha" onfocus="focado(event)" onblur="desfocado(event)" />
+                    </span>
+                </span>
                 <input type="submit" name="submit" id="submit" value="Entrar" />
             </form>
         </div><div id="rodape">

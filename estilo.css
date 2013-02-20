@@ -15,7 +15,7 @@ input, textarea{
     margin: -10px;
     margin-top: -23px;
     display:table;
-    width:100%;
+    width:105%;
     height: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -29,14 +29,6 @@ input, textarea{
 #logo{
     margin: 1%;
     float:left;
-}
-
-h1{
-    float:left;
-    position:relative;
-    left: 50px;
-    top: 75px;
-    font-size: 3em;
 }
 
 /*textarea{
