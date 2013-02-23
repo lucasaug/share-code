@@ -22,7 +22,7 @@
 		</style>
 		<script type="text/javascript">
 
-			var elementosEdit = ["nome", "usuario","religiao","nAcad","profissao","email"];
+			var elementosEdit = ["nome", "usuario","religiao","nAcad","profissao","email","nascimento"];
 
 			function editar(){
 				for(var i in elementosEdit){
@@ -48,6 +48,18 @@
 				botao.value="Editar";
 				botao.setAttribute("onclick","editar()");
 				botao.style.marginLeft="17%";
+			}
+
+			function digitaNascimento(e){
+				var campo = document.getElementById("nascimentoEdit");
+				var valor = campo.value;
+				var caracter = e.keyCode;
+				if((caracter>=48) && (caracter<=57)){
+					if((valor.length==2) || (valor.length==5)){
+						valor+="/";
+						campo.value = valor;
+					}
+				}
 			}
 
 		</script>
@@ -78,7 +90,12 @@
 		    		</span>
 		    	</h4>
 		    	<h4>Data de nascimento:&nbsp;
-		    		<span id="nascimento">01/janeiro/2013</span>
+		    		<span id="nascimento">01/01/2013</span>
+		    		<span class="input">
+		    			<span class="tipo">
+		    				<input type="hidden" id="nascimentoEdit" onkeydown="digitaNascimento(event)" />
+		    			</span>
+		    		</span>
 		    	</h4>
 		    	<h4>Prefer&ecirc;ncia Religiosa:&nbsp;
 		    		<span id="religiao">Ate&iacute;smo</span>
