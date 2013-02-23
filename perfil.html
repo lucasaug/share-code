@@ -6,10 +6,11 @@
 		<style type="text/css">
 
 		#editar{
-			width: 6%;
-			height: 1%;
+			width: 4%;
+			height: 2.5%;
 			font-size: 8pt;
-			margin-left: 5%;
+			margin-left: 17%;
+			position: fixed;
 		}
 		.inline{
 			display: inline;
@@ -21,7 +22,7 @@
 		</style>
 		<script type="text/javascript">
 
-			var elementosEdit = ["nome", "usuario","religiao","nAcad"];
+			var elementosEdit = ["nome", "usuario","religiao","nAcad","profissao","email"];
 
 			function editar(){
 				for(var i in elementosEdit){
@@ -32,19 +33,21 @@
 				var botao = document.getElementById("editar");
 				botao.value="Concluir";
 				botao.setAttribute("onclick","concluir()");
-				botao.style.marginLeft="50%";
+				botao.style.marginLeft="35%";
 			}
 
 			function concluir(){
 				for(var i in elementosEdit){
+					var info = document.getElementById(elementosEdit[i]);
 					var campo = document.getElementById(elementosEdit[i]+"Edit");
-					document.getElementById(elementosEdit[i]).innerHTML = campo.value;
+					info.innerHTML = campo.value;
 					campo.setAttribute("type","hidden");
 				}
+				document.getElementById("email").setAttribute("href","mailto:"+document.getElementById("emailEdit").value);
 				var botao = document.getElementById("editar");
 				botao.value="Editar";
 				botao.setAttribute("onclick","editar()");
-				botao.style.marginLeft="5%";
+				botao.style.marginLeft="17%";
 			}
 
 		</script>
@@ -98,6 +101,11 @@
 		    	</h4>
 		    	<h4>Profiss&atilde;o:&nbsp;
 		    		<span id="profissao">Estudante</span>
+		    		<span class="input">
+		    			<span class="tipo">
+		    				<input type="hidden" id="profissaoEdit" />
+		    			</span>
+		    		</span>
 		    	</h4>
 		    	<h4>
 		    		<span>Linguagens Computacionais Conhecidas:&nbsp;<span>
@@ -122,8 +130,13 @@
 		    </div>
 		    <h3>Informa&ccedil;&otilde;es de Contato</h3>
 		    <div id="contato" class="lefted">
-		    	<h4 id="email">Email:&nbsp;
-		    		<a href="mailto:raphaestmtt@gmail.com">raphaestmtt@gmail.com</a>
+		    	<h4>Email:&nbsp;
+		    		<a href="mailto:raphaestmtt@gmail.com" id="email">raphaestmtt@gmail.com</a>
+		    		<span class="input">
+		    			<span class="tipo">
+		    				<input type="hidden" id="emailEdit" />
+		    			</span>
+		    		</span>
 		    	</h4>		    	
 		   	</div>
 		</div>
