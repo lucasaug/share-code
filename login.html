@@ -9,38 +9,6 @@
             }
         </style>
         <script type="text/javascript">
-        
-            function focado(e){
-                if(!e) var e = window.event;
-                
-                var campo = e.target;
-                var valor = campo.value;
-                var id = campo.id;
-                
-                if(id=="senha"){
-                    campo.setAttribute("type","password");
-                }
-                
-                if(valor == campo.defaultValue){
-                    campo.value = "";
-                }
-            }
-            
-            function desfocado(e){
-                if(!e) var e = window.event;
-                
-                var campo = e.target;
-                var valor = campo.value;
-                var id = campo.id;
-                
-                if(valor == ""){
-                    campo.value = campo.defaultValue;
-                    if(id=="senha"){
-                        campo.setAttribute("type","text");
-                    }
-                }
-            }
-            
         </script>
     </head>
     <body>
@@ -52,12 +20,12 @@
             <form method="post" action="">
                 <span class="input">
 				    <span class="tipo">
-				        <input type="text" name="usuario" id="usuario" value="Usu&aacute;rio" autofocus onfocus="focado(event)" onblur="desfocado(event)" />
+				        <input type="text" name="usuario" id="usuario" placeholder="Usu&aacute;rio" autofocus/>
 				    </span>
 				</span>
                 <span class="input">
                     <span class="tipo">
-                        <input type="text" name="senha" id="senha" value="Senha" onfocus="focado(event)" onblur="desfocado(event)" />
+                        <input type="text" name="senha" id="senha" placeholder="Senha" />
                     </span>
                 </span>
                 <input type="submit" name="submit" id="submit" value="Entrar" />
