@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload de c&oacute;digo - ShareCode</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>		
+        <div id="topo">
+            <img src="./recursos/logo.png" id="logo"/>
+            <div id="nav">
+                <a href="index.html">Home</a>
+                <a href="visualizar_codigo.html">Ver c&oacute;digo</a>
+                <a href="upload.html">Upload de c&oacute;digo</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="login.html">Login</a>
+                <a href="cadastrar.html">Registro</a>
+            </div>
+        </div>
+	    <div id="conteudo">
+	        <div style="margin-left: auto; margin-right: auto; padding-bottom: 30px;">
+	            <form method="post" action="">
+		            <h2>Enviar arquivo</h2>
+		            <br/>
+		            <span class="input">
+				        <span class="nome">Nome do c&oacute;digo:</span>
+		                    <span class="tipo">
+		                        <input type="text" name="nome"/>
+		                    </span>
+		                </span><br />
+		                <span class="input">
+		                    <span class="nome">Descri&ccedil;&atilde;o:</span>
+		                    <span class="tipo">
+		                        <textarea name="desc"></textarea>
+		                    </span>
+		                </span><br />
+		            <span class="input">
+		                <span class="nome">Autor:</span>
+		                <span class="tipo">
+		                    <input type="text" name="autor"/>
+		                </span>
+		            </span><br />
+		            <span class="input">
+                        <span class="nome">Insira o c&oacute;digo aqui:</span>
+		                <span class="tipo" id="codigo">
+                            <textarea name="codigo" style="width: 600px; height: 150px;" 
+                                      resizeable="false"></textarea>
+		                </span>
+		            </span>
+		            <br/>
+		            <input type="submit" value="Enviar c&oacute;digo" />
+		        </form>
+		    </div>
+        </div>
+        <div id="rodape"></div>
+    </body>
+</html>
