@@ -50,16 +50,27 @@ a{
 #nav a{
     margin: 0px 15px 0px 15px;
     padding: 15px;
-    border-style: ridge;
+    background-size: 0px;
+    border-style: solid;
     border-color: #CCCCCC;
     border-width: 3px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
     color: #303030;
+    transition: background-size 2s;
+    -moz-transition: background-size 2s;
+    -webkit-transition: background-size 2s;
 }
 
 #nav a:hover{
-    background-color: #DDDDDD;
-    border-style: groove;
+    background:url("recursos/fundo_botao.png");
+    background-size: 250px;
+    background-repeat: repeat-x;
+    border-style: solid;
     border-width: 3px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
 }
 
 #formata_codigo{
