@@ -22,7 +22,7 @@
 		</style>
 		<script type="text/javascript">
 
-			var elementosEdit = ["nome", "usuario","religiao","nAcad","profissao","email","nascimento"];
+			var elementosEdit = ["nome", "usuario","nAcad","profissao","email","nascimento"];
 
 			function editar(){
 				for(var i in elementosEdit){
@@ -67,7 +67,7 @@
 	</head>
 	<body>
 		<div id="topo">
-		    <img src="./recursos/logo.png" id="logo"/>
+		    <a href="index.html"><img src="recursos/logo.png" /></a>
 		    <div id="nav">
 		    	<a href="index.html">Home</a>
 		    	<a href="visualizar_codigo.html">Ver c&oacute;digo</a>
@@ -78,7 +78,7 @@
 		    </div>
         </div>
 		<div id="conteudo">
-		    <h1 id="nome" class="inline">TheShadowLight</h1>
+		    <h2 id="nome" class="inline">TheShadowLight</h2>
 		    <span class="input">
 		    	<span class="tipo">
 		    		<input type="hidden" id="nomeEdit" />
@@ -101,14 +101,6 @@
 		    		<span class="input">
 		    			<span class="tipo">
 		    				<input type="hidden" id="nascimentoEdit" onkeydown="digitaNascimento(event)" />
-		    			</span>
-		    		</span>
-		    	</h4>
-		    	<h4>Prefer&ecirc;ncia Religiosa:&nbsp;
-		    		<span id="religiao">Ate&iacute;smo</span>
-		    		<span class="input">
-		    			<span class="tipo">
-		    				<input type="hidden" id="religiaoEdit" />
 		    			</span>
 		    		</span>
 		    	</h4>

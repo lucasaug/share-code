@@ -40,22 +40,25 @@ a{
 #logo{
     margin: 1%;
     float:left;
+    margin: 20px 0px 0px 0px;
 }
 
 #nav{
     float: right;
-    margin: 120px 30px 0px 30px;
+    margin: 40px 30px 10px 30px;
 }
 
 #nav a{
     margin: 0px 15px 0px 15px;
-    padding: 15px;
+    padding: 10px;
     background-size: 0px;
     border-style: solid;
     border-color: #CCCCCC;
     border-width: 3px;
-    border-radius: 30px;
-    -moz-border-radius: 30px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 0.8em;
     color: #303030;
     transition: background-size 2s;
     -moz-transition: background-size 2s;
@@ -68,9 +71,9 @@ a{
     background-repeat: repeat-x;
     border-style: solid;
     border-width: 3px;
-    border-radius: 30px;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
 
 #formata_codigo{
