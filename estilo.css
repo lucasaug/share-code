@@ -81,3 +81,12 @@ a{
     right: 250px;
     width: 100%;
 }
+
+.resultado{
+    background-color: #DDDDDD;
+    width: 60%;
+}
+
+.resultado a{
+    color: #000000;
+}
